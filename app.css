@@ -29,6 +29,16 @@ body {
     font-size: 4rem;
 }
 
+#headingGroupTickets {
+    font-weight: 100;
+    font-size: 2rem;
+    padding-top: 0.2em;
+}
+
+#headingGroupTickets span {
+    color: #EA1C2C;
+}
+
 @media (max-width: 1200px) {
     #headingGroup h1 {
         font-weight: 100;
