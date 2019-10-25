@@ -15,4 +15,24 @@ var months = ['January','February','March','April','May','June','July','August',
 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];    
 var tomorrow = new Date();
 tomorrow.setTime(tomorrow.getTime() + (1000*3600*24));       
-document.getElementById("spanDate").innerHTML = days[tomorrow.getDay()] + ", " + months[tomorrow.getMonth()] + " " + tomorrow.getDate()+ ", " + tomorrow.getFullYear();
+document.getElementById("spanDate").innerHTML = days[tomorrow.getDay()] + ", " + months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
+
+var ticketDisplay = document.querySelector("#no_of_tickets");
+var tickets = 0;
+var subtractTickets = document.querySelector("#subtract");
+var addTickets = document.querySelector("#add");
+subtractTickets.addEventListener("click",function(){
+    if(tickets === 0)
+    {
+        alert("Cannot have negative amount of tickets");
+    }
+    else if(tickets > 0)
+    {
+        tickets--;
+        ticketDisplay.innerHTML = tickets;
+    }
+});
+addTickets.addEventListener("click",function(){
+    tickets++;
+    ticketDisplay.innerHTML = tickets; 
+});
