@@ -72,7 +72,7 @@ body {
     color:  #EA1C2C;
 }
 
-#candy_red {
+.candy_red {
     color:  #EA1C2C;
     margin-top: 0.5em;
 }
@@ -81,7 +81,7 @@ body {
     padding: 6px 12px;
 }
 
-#no_of_tickets {
+.no_of_tickets {
     color:  rgb(222,192,222);
 }
 
