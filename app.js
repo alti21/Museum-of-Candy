@@ -42,3 +42,10 @@ for(var i=0;i<ticketDisplay.length;i++)
     });
 }
 
+let all = document.querySelectorAll(".days > * > * ");
+
+Array.from(all).forEach(cur => cur.innerHTML = 5);
+
+tomorrow.
+
+//use array of size 365, loop through each month, for each month, loop to correct sport in array of size 365
