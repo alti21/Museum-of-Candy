@@ -41,15 +41,29 @@ for(let i=0;i<document.querySelectorAll(".no_of_tickets").length;i++)
     });
 }
 
-<<<<<<< HEAD
 let all = document.querySelectorAll(".days > * > * ");
 
-Array.from(all).forEach(cur => cur.innerHTML = 5);
+//Array.from(all).forEach(cur => cur.innerHTML = 5);
 
-tomorrow.
+console.log(tomorrow.getDay());
+let year = 2020;
+let today= new Date('March' +  " 1, "+ year);
+let start_day = today.getDay() + 1;   // starts with 0
 
-//use array of size 365, loop through each month, for each month, loop to correct sport in array of size 365
-=======
-document.querySelectorAll(".class")[0].innerHTML = <h1>5</h1>;
+console.log(`start day is ${start_day}`);//start_day is 4, January 1st of 2020 is on 4th day of the week
 
->>>>>>> 939dec2db0fc3d0f235cbf01eb48dead1f716941
+const fillDays = (month) => {
+    for(let i=start_day; i < 28; i++)
+    {
+        document.querySelectorAll('td')[i-1].innerHTML = i-(start_day - 1);//7
+        //document.querySelectorAll(".days > * > * ")[i].innerHTML = i;
+    }
+};
+
+fillDays('January');
+
+// for(const cur of months)
+// {
+//     fillDays(cur);
+// }
+//use array of size 365, loop through each month, for each month, loop to correct spot in array of size 365
