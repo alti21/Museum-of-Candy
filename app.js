@@ -46,21 +46,36 @@ let all = document.querySelectorAll(".days > * > * ");
 //Array.from(all).forEach(cur => cur.innerHTML = 5);
 
 console.log(tomorrow.getDay());
-let year = 2020;
-let today= new Date('March' +  " 1, "+ year);
+let year = tomorrow.getFullYear();
+let currentMonth = tomorrow.getMonth();
+let today= new Date(months[currentMonth] +  " 1, "+ year);
 let start_day = today.getDay() + 1;   // starts with 0
 
 console.log(`start day is ${start_day}`);//start_day is 4, January 1st of 2020 is on 4th day of the week
 
-const fillDays = (month) => {
-    for(let i=start_day; i < 28; i++)
-    {
+const fillDays = () => {
+    for(let i=start_day; i <= 31; i++)
+    {//display days of the month
         document.querySelectorAll('td')[i-1].innerHTML = i-(start_day - 1);//7
         //document.querySelectorAll(".days > * > * ")[i].innerHTML = i;
     }
 };
 
-fillDays('January');
+fillDays();
+
+
+Array.from(document.querySelectorAll('td')).forEach(el => {
+    //console.log(el.textContent);
+    if(el.textContent !== '')
+    {
+        //console.log('test');
+        el.classList.add('color');
+    }
+    el.addEventListener('click', () => {
+        el.classList.toggle('selected');
+    });
+});
+
 
 // for(const cur of months)
 // {
